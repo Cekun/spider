@@ -51,6 +51,6 @@ function startRequest(url) {
                   }
             });
       }).on('error', (err) => { console.log(err) });
-}
+} 
 
 fetchPage(url);
