@@ -6,9 +6,9 @@ var i = 0;
 var url = "http://www.ss.pku.edu.cn/index.php/newscenter/news/2391";
 //初始url 
 
-function fetchPage(x) {     //封装了一层函数
+(fetchPage(x) {     //封装了一层函数
       startRequest(x);
-}
+})(url)
 
 
 function startRequest(x) {
@@ -104,4 +104,4 @@ function savedImg($, news_title) {
             request(img_src).pipe(fs.createWriteStream('./image/' + news_title + '---' + img_filename));     //通过流的方式，把图片写到本地/image目录下，并用新闻的标题和图片的标题作为图片的名称。
       })
 }
-fetchPage(url);      //主程序开始运行
+//fetchPage(url);      //主程序开始运行
